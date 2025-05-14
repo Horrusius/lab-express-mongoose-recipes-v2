@@ -41,7 +41,7 @@ app.post('/recipes', (req, res) => {
         })
         .catch((e) => {
             console.log(e);
-            res.status(500).json({ error: "Failed to create a new pizza" });
+            res.status(500).json({ error: "Failed to create a new recipe" });
         })
 })
 
