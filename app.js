@@ -70,7 +70,7 @@ app.get('/recipes/:id', (req, res) => {
             res.status(200).json(recipe)
         })
         .catch(e => {
-            constole.log(e);
+            console.log(e);
             res.status(500).json({error: "Failed to get recipe details"})
         })
 })
@@ -95,7 +95,7 @@ app.put('/recipes/:id', (req, res) => {
 
 //  Iteration 7 - Delete a Single Recipe
 //  DELETE  /recipes/:id route
-app.delete('/recipe/:id', (req, res) => {
+app.delete('/recipes/:id', (req, res) => {
     const {id} = req.params;
 
     Recipe.findByIdAndDelete(id)
